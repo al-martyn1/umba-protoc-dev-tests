@@ -61,8 +61,8 @@ endif()
 set(COMMON_UMBA_OPTIONS "BIGOBJ" "UTF8" "PEDANTIC" "WERR") # "PEDANTIC"/"WALL" "WERR"
 
 
-set(TARGET umba-template)
-add_executable(${TARGET} "${SRC_ROOT}/umba-template/umba-template.cpp" "${headers}")
+set(TARGET umba-protoc-test-001)
+add_executable(${TARGET} "${SRC_ROOT}/umba-protoc-dev-tests/${TARGET}.cpp" "${headers}")
 umba_add_target_options(${TARGET} ${COMMON_UMBA_OPTIONS} "CONSOLE") 
 target_link_libraries(${TARGET} PRIVATE "${PLATFORM_LIBS}" "${COMMON_LIBS}")
 
